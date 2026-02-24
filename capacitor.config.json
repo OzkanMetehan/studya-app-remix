@@ -1,0 +1,15 @@
+
+{
+  "appId": "com.studya.app",
+  "appName": "Studya",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "Preferences": {
+      "group": "StudyaGroup"
+    }
+  }
+}

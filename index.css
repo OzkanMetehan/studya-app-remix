@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Rubik", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Rubik", ui-serif, Georgia, serif;
+  --font-mono: "Rubik", ui-monospace, SFMono-Regular, monospace;
+  --font-rubik: "Rubik", sans-serif;
+
+  /* Colors */
+  --color-primary: #333333;
+  --color-secondary: #666666;
+  --color-tertiary: #999999;
+
+  --color-base-1: #FECE6F;
+  --color-base-2: #FEE4A0;
+  --color-base-3: #FFF3DA;
+
+  --color-acc-1: #A8DADC;
+  --color-acc-2: #6D9798;
+  --color-acc-3: #F7B6A0;
+
+  --color-neu-1: #F9F9F9;
+  --color-neu-2: #E0E0E0;
+  --color-neu-3: #C2C2C2;
+
+  --color-sem-1: #9DD9B1;
+  --color-sem-2: #FDC88C;
+  --color-sem-3: #E58F8F;
+
+  /* Legacy Mappings */
+  --color-accent: #F7B6A0;
+  --color-blob-green: #9DD9B1;
+  --color-blob-blue: #A8DADC;
+  --color-blob-orange: #F7B6A0;
+  --color-blob-cream: #FFF3DA;
+  
+  --color-sage: #A8DADC;
+  --color-pale-yellow: #FEE4A0;
+  --color-teal-header: #6D9798;
+  --color-teal-dark: #567a7b;
+  
+  --color-peach-light: #FFF3DA;
+  --color-peach-dark: #F7B6A0;
+  --color-badge-bg: #FEE4A0;
+  
+  --color-cal-green: #9DD9B1;
+  --color-cal-bg: #FFF3DA;
+  
+  --color-lib-blue: #A8DADC;
+  --color-lib-card: #F9F9F9;
+  
+  --color-type-1: #333333;
+  --color-type-2: #666666;
+  --color-type-3: #999999;
+
+  /* Shadows */
+  --shadow-nav: 0 -5px 15px rgba(0,0,0,0.05);
+
+  /* Animations */
+  --animate-fadeIn: fadeIn 0.5s ease-out;
+  --animate-flyOut: flyOut 2s ease-out forwards;
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes flyOut {
+    0% { opacity: 0; transform: translateY(20px); }
+    15% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-40px); }
+  }
+}
+
+/* Global Styles */
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Rubik', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFF3DA; 
+  font-family: 'Rubik', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden; 
+  line-height: 1.5;
+}
+
+/* Ensure all elements inherit the font */
+*, ::before, ::after {
+  font-family: inherit;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+/* Hexagon Clip Path */
+.hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* Bottom Nav Safe Area */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
